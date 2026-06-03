@@ -1,0 +1,63 @@
+:is(.accordian, .accordian-sameer) {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+:is(.accordian, .accordian-sameer) .accordian-heading {
+  background: #efefef;
+  font-weight: 700;
+}
+
+:is(.accordian, .accordian-sameer) .accordian-heading > div {
+  padding: 12px;
+}
+
+:is(.accordian, .accordian-sameer) .accordian-item {
+  border-top: 1px solid #ddd;
+}
+
+:is(.accordian, .accordian-sameer) .accordian-item-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  padding: 12px 40px 12px 12px;
+  background: #fff;
+  color: var(--text-color);
+  text-align: left;
+  cursor: pointer;
+}
+
+:is(.accordian, .accordian-sameer) .accordian-item-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #777;
+  border-bottom: 2px solid #777;
+  transform: translateY(-65%) rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+:is(.accordian, .accordian-sameer) .accordian-item-button[aria-expanded='true'] {
+  background: #efefef;
+}
+
+:is(.accordian, .accordian-sameer) .accordian-item-button[aria-expanded='true']::after {
+  transform: translateY(-35%) rotate(225deg);
+}
+
+:is(.accordian, .accordian-sameer) .accordian-item-content {
+  padding: 12px;
+}
+
+:is(.accordian, .accordian-sameer) .accordian-item-content picture,
+:is(.accordian, .accordian-sameer) .accordian-item-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
